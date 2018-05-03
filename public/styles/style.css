@@ -1,0 +1,37 @@
+.alert{
+    display : none;
+}
+form input{
+    display: none;
+}
+
+form label{
+    cursor: pointer;
+}
+.preview{
+    border : 1px solid black;
+    max-height : 300px;
+    overflow-y : scroll;
+}
+
+.list-group-item{
+    display : flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-group-item div {
+    padding : 10px;
+}
+
+.preview img{
+    width : 80px;
+    padding : 2px 4px;
+    cursor: pointer;
+}
+
+.preview p {
+    margin : 0;
+}

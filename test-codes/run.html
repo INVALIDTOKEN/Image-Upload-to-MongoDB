@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./imageviewer.css">
+    <style>
+        .alert{
+            display : none;
+        }
+        form input{
+            display : none;
+        }
+
+        form label{
+            cursor: pointer;
+        }
+        .preview{
+            border : 1px solid black;
+            max-height : 300px;
+            overflow-y : scroll;
+        }
+
+        .list-group-item{
+            display : flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list-group-item div {
+            padding : 10px;
+        }
+
+        .preview img{
+            width : 80px;
+            padding : 2px 4px;
+            cursor: pointer;
+        }
+
+        .preview p {
+            margin : 0;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="bg-primary d-flex justify-content-center align-items-center text-white">
+        <h3 class="p-1">Select Images and upload</h3>
+    </header>
+    <div class="container my-4">
+        <div class="alert alert-danger">This is wrong input type</div>
+        <div class="row">
+            <form method="post" class="col-sm-8 mx-auto" enctype="multipart/form-data">
+                <div>
+                    <label for="image_uploads" class="list-group-item btn btn-outline-primary">Choose images to upload (PNG, JPG)</label>
+                    <input type="file" id="image_uploads" name="image_uploads" accept=".jpg, .jpeg, .png" multiple>
+                </div>
+                <div class="preview py-4 px-2 my-3">
+                    <p>No Image Selected Yet</p>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-block">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="./imageviewer.js"></script>
+    <script src="./imagezoom.js"></script>
+</body>
+</html>

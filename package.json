@@ -1,0 +1,23 @@
+{
+  "name": "upload-image-express",
+  "version": "1.0.0",
+  "description": "Upload pictures using this app",
+  "main": "mainServer.js",
+  "scripts": {
+    "start": "node mainServer.js",
+    "dev" : "nodemon mainServer.js"
+  },
+  "author": "Sahil Kapoor",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "gridfs-stream": "^1.1.1",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.13",
+    "multer": "^1.3.0",
+    "multer-gridfs-storage": "^3.0.1",
+    "pug": "^2.0.3"
+  }
+}
